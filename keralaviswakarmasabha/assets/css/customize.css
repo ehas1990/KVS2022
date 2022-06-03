@@ -6,3 +6,21 @@
 
 }
 }
+#as_user {
+    width: 250px;
+    background-color: #10334a;
+    height: 250px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: relative;
+    transition: all 0.3s linear;
+}
+.image
+{
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    border-radius: 100%;
+}
