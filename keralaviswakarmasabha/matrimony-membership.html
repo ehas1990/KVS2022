@@ -126,117 +126,8 @@
        
         <section class="as_service_wrapper as_padderTop50 as_padderBottom80">
             <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="as_service_box text-center">
-                            <span class="as_icon" id="as_user">
-                                <img src="assets/images/coment1.jpg" class="img-fluid image" alt="">                                   
-                            </span>
-
-                            <h4 class="as_subheading">  K. Ramadasan Achary</h4>
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/user.svg" alt="">
-                      President</p>
-                           
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/call1.svg" alt="">
-                       9048675860</p>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="as_service_box text-center">
-                            <span class="as_icon" id="as_user">
-                                <img src="assets/images/coment2.jpg"  class="img-fluid image" alt="">                                   
-                            </span>
-
-                            <h4 class="as_subheading">K. K. Hari</h4>
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/user.svg" alt="">
-                     Working President</p>
-                           
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/call1.svg" alt="">
-                                9447421329</p>
-                           
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="as_service_box text-center">
-                            <span class="as_icon" id="as_user">
-                                <img src="assets/images/coment2.jpg"  class="img-fluid image" alt="">                                 
-                            </span>
-
-                            <h4 class="as_subheading">A. K. Vijayanath</h4>
-                            
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/user.svg" alt="">
-                                Secratary</p>
-                           
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/call1.svg" alt="">
-                                8547667077</p>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="as_service_box text-center">
-                            <span class="as_icon" id="as_user">
-                                <img src="assets/images/coment2.jpg"  class="img-fluid image" alt="">                                 
-                            </span>
-
-                            <h4 class="as_subheading"> T. P. Raju Kunnamangalam</h4>
-                            
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/user.svg" alt="">
-                                Treasurer</p>
-                           
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/call1.svg" alt="">
-                                8547667077</p>
-                            
-                         
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="as_service_box text-center">
-                            <span class="as_icon" id="as_user">
-                                <img src="assets/images/coment2.jpg"  class="img-fluid image" alt="">                              
-                            </span>
-
-                            <h4 class="as_subheading">Adv. Satheesh T. Padmanabhan</h4>
-                          
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/user.svg" alt="">
-                              Vice  President</p>
-                           
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/call1.svg" alt="">
-                                9495027302</p>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="as_service_box text-center">
-                            <span class="as_icon" id="as_user">
-                                <img src="assets/images/coment2.jpg"  class="img-fluid image" alt="">                           
-                            </span>
-
-                            <h4 class="as_subheading">Shri. Chandra Mohanan.</h4>
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/user.svg" alt="">
-                              Joint  Secratary</p>
-                           
-                            <p class=""> <span class="as_infoicon"></span>
-                                <img src="assets/images/svg/call1.svg" alt="">
-                                9495027302  </p>
-                            
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
+                   <div class="row">
+    
         </section>
           
        
@@ -351,6 +242,27 @@
     <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
     <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
     <script src="assets/js/custom.js"></script>  
+    <script>
+         // jQuery Plugin: http://flaviusmatis.github.io/simplePagination.js/
+
+var items = $(".list-wrapper .list-item");
+    var numItems = items.length;
+    var perPage =6;
+
+    items.slice(perPage).hide();
+
+    $('#pagination-container').pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+        onPageClick: function (pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+        }
+    });
+    </script>
    
 </body>
 
